@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const galleryImage = document.getElementById('gallery-image');
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
-
-    // Update image paths relative to your project directory
     const images = [
         'images/p1.png',
         'images/p2.png',
@@ -30,6 +28,5 @@ document.addEventListener('DOMContentLoaded', function () {
     prevButton.addEventListener('click', prevImage);
     nextButton.addEventListener('click', nextImage);
 
-    // Show the initial image
     showImage(currentIndex);
 });
