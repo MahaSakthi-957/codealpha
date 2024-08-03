@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showImage(index) {
         galleryImage.src = images[index];
-        galleryImage.alt = `Image ${index + 1} of ${images.length}`; // Improve accessibility
+        galleryImage.alt = `Image ${index + 1} of ${images.length}`;
     }
 
     function prevImage() {
