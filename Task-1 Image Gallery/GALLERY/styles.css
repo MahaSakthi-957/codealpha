@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 254, 255);
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+.gallery {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+.controls button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

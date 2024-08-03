@@ -1,0 +1,35 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const galleryImage = document.getElementById('gallery-image');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+
+    // Update image paths relative to your project directory
+    const images = [
+        'images/p1.png',
+        'images/p2.png',
+        'images/p4.png'
+    ];
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+        galleryImage.src = images[index];
+        galleryImage.alt = `Image ${index + 1} of ${images.length}`; // Improve accessibility
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    prevButton.addEventListener('click', prevImage);
+    nextButton.addEventListener('click', nextImage);
+
+    // Show the initial image
+    showImage(currentIndex);
+});
